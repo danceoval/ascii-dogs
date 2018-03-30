@@ -9,7 +9,7 @@ export default class Main extends Component {
         	sayWoof : false
         	/* 
         	This state is so US-centric. What if some dogs barked randomly 
-        	in Japanese (wan-wan), German (wau-wau), or ()
+        	in Japanese (wan-wan), German (wau-wau), etc....
 
         	*/ 
         }
