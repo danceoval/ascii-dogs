@@ -7,6 +7,11 @@ export default class Main extends Component {
         this.state = {
         	dogs : [],
         	sayWoof : false
+        	/* 
+        	This state is so US-centric. What if some dogs barked randomly 
+        	in Japanese (wan-wan), German (wau-wau), or ()
+
+        	*/ 
         }
 
         this.handleClick = this.handleClick.bind(this)
@@ -23,6 +28,7 @@ export default class Main extends Component {
     }
 
     handleClick(event) {
+    	// All the dogs woof, but how can we get one dog to woof on click?
     	this.setState({
     		sayWoof : !this.state.sayWoof
     	})
@@ -33,9 +39,11 @@ export default class Main extends Component {
         	<div>
 	        	<h3>ASCII Dogs</h3>
 	        	{
+
 	        	    this.state.dogs.map((dog, i) => {
 	        			
 	        			return (
+	        				// We can probably refactor this in to a dummy dog component
 	        				<div key={i} className="dog" onClick={this.handleClick}>
 		        				{
 		        					dog.split("\n").map((dogLine, idx) => {
